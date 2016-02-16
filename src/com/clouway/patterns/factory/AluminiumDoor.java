@@ -3,7 +3,7 @@ package com.clouway.patterns.factory;
 /**
  * @author Krasimir Raikov(raikov.krasimir@gmail.com)
  */
-public abstract class AluminiumDoor extends AbstractHousePart implements Door {
+public class AluminiumDoor implements Door {
     private final int width;
     private final int height;
 
