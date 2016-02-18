@@ -12,7 +12,7 @@ public class SoldProducts implements ProductObserver {
 
     public SoldProducts(ProductListener listener) {
         this.listener = listener;
-        listener.registerObserverOnSold(this);
+        listener.registerObserver(this);
     }
 
     @Override

@@ -13,8 +13,7 @@ public class AvailableProducts implements ProductObserver {
 
     public AvailableProducts(ProductListener listener) {
         this.listener = listener;
-        listener.registerObserverOnBought(this);
-        listener.registerObserverOnSold(this);
+        listener.registerObserver(this);
     }
 
     @Override

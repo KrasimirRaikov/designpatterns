@@ -7,27 +7,24 @@ import java.util.List;
  * @author Krasimir Raikov(raikov.krasimir@gmail.com)
  */
 public class ProductListener {
-    List<ProductObserver> boughtObservers = new ArrayList<ProductObserver>();
-    List<ProductObserver> soldObservers = new ArrayList<ProductObserver>();
+    List<ProductObserver> observers = new ArrayList<ProductObserver>();
+
 
 
     public void bought(Product product, int quantity) {
-        for (ProductObserver observer : boughtObservers) {
+        for (ProductObserver observer : observers) {
             observer.bought(product, quantity);
         }
     }
 
     public void sold(Product product, int quantity) {
-        for (ProductObserver observer : soldObservers) {
+        for (ProductObserver observer : observers) {
             observer.sold(product, quantity);
         }
     }
 
-    public void registerObserverOnBought(ProductObserver observer) {
-        boughtObservers.add(observer);
+    public void registerObserver(ProductObserver observer) {
+        observers.add(observer);
     }
 
-    public void registerObserverOnSold(ProductObserver observer) {
-        soldObservers.add(observer);
-    }
 }
