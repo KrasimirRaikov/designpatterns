@@ -12,6 +12,6 @@ public class RealInteger implements Integer {
 
     @Override
     public String integerAsString() {
-        return java.lang.Integer.toString(integer);
+        return "real integer: "+ integer;
     }
 }

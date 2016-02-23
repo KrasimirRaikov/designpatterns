@@ -10,6 +10,5 @@ public class Demo {
         Integer integer = integerFactory.createInstance(15);
 
         System.out.println(integer.integerAsString());
-        System.out.println(integer.integerAsString());
     }
 }

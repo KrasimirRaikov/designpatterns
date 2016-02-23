@@ -8,6 +8,7 @@ public class IntegerProxy implements Integer {
     private int integer;
     private RealInteger realInteger;
 
+
     public IntegerProxy(int integer) {
         this.integer = integer;
     }
