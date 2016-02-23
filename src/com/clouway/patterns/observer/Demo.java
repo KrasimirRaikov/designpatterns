@@ -5,18 +5,18 @@ package com.clouway.patterns.observer;
  */
 public class Demo {
     public static void main(String[] args) {
-        ProductListener listener = new ProductListener();
-        AvailableProducts availableProducts = new AvailableProducts(listener);
-        SoldProducts soldProducts = new SoldProducts(listener);
+        Store store = new Store();
+        store.registerObserver(new SoldProducts());
+        store.registerObserver(new AvailableProducts());
 
         Product apple = new Product("Apple", 3);
         Product chair = new Product("Chair", 15);
 
-        listener.bought(apple, 12);
-        listener.sold(apple, 10);
+        store.bought(apple, 12);
+        store.sold(apple, 10);
 
-        listener.bought(chair, 20);
-        listener.sold(chair, 13);
+        store.bought(chair, 20);
+        store.sold(chair, 13);
 
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author Krasimir Raikov(raikov.krasimir@gmail.com)
  */
-public class ProductListener {
+public class Store {
     List<ProductObserver> observers = new ArrayList<ProductObserver>();
 
 

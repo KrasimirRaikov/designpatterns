@@ -8,12 +8,7 @@ import java.util.Map;
  */
 public class SoldProducts implements ProductObserver {
     Map<Product, Integer> soldProducts = new HashMap<Product, Integer>();
-    private ProductListener listener;
 
-    public SoldProducts(ProductListener listener) {
-        this.listener = listener;
-        listener.registerObserver(this);
-    }
 
     @Override
     public void bought(Product product, int quantity) {
